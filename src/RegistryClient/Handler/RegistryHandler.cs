@@ -13,7 +13,7 @@ namespace RegistryClient
 {
     public class RegistryHandler : DelegatingHandler
     {
-        public Dictionary<string, BearerToken> TokenCache { get; private set; }
+        public Dictionary<string, BearerToken> TokenCache { get; private set; } = new Dictionary<string, BearerToken>();
         public RegistryHandler(HttpMessageHandler messageHandler)
             : base (messageHandler)
         { }
