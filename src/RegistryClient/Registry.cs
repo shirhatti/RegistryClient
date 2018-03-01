@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace RegistryClient
@@ -41,7 +42,7 @@ namespace RegistryClient
             return ApiVersion.v1;
         }
 
-        public async Task<IEnumerable<string>> GetTagsAsync(string name)
+        public async Task<IList<string>> GetTagsAsync(string name)
         {
             var uri = new Uri(_registryUri, $"/v2/{name}/tags/list");
             var request = new HttpRequestMessage(HttpMethod.Get, uri);
@@ -49,15 +50,60 @@ namespace RegistryClient
             var responseJObject = JObject.Parse(await response.Content.ReadAsStringAsync());
             if (response.StatusCode != HttpStatusCode.OK)
             {
-                var exceptions = new List<Exception>();
-                foreach (JObject error in (JArray)responseJObject["errors"])
-                {
-                    exceptions.Add(new RegistryException((string)error["message"], (string)error["message"], (string)error["message"]));
-                }
-                throw new AggregateException(exceptions);
+                throw CreateException(responseJObject);
             }
             var tags = ((JArray)responseJObject["tags"]).ToObject<List<string>>();
             return tags;
+        }
+        public async Task<Manifest> GetManifestAsync(string name)
+        {
+            return await GetManifestAsync(name, "latest");
+        }
+
+        public async Task<Manifest> GetManifestAsync(string name, string reference)
+        {
+            var uri = new Uri(_registryUri, $"/v2/{name}/manifests/{reference}");
+            var request = new HttpRequestMessage(HttpMethod.Get, uri);
+            request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.docker.distribution.manifest.v2+json"));
+            var response = await _httpClient.SendAsync(request);
+            var responseJObject = JObject.Parse(await response.Content.ReadAsStringAsync());
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                throw CreateException(responseJObject);
+            }
+            return responseJObject.ToObject<Manifest>();
+        }
+
+        public async Task<ManifestList> GetManifestListAsync(string name)
+        {
+            return await GetManifestListAsync(name, "latest");
+        }
+        public async Task<ManifestList> GetManifestListAsync(string name, string reference)
+        {
+            var uri = new Uri(_registryUri, $"/v2/{name}/manifests/{reference}");
+            var request = new HttpRequestMessage(HttpMethod.Get, uri);
+            request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.docker.distribution.manifest.list.v2+json"));
+            var response = await _httpClient.SendAsync(request);
+            var responseJObject = JObject.Parse(await response.Content.ReadAsStringAsync());
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                throw CreateException(responseJObject);
+            }
+            return responseJObject.ToObject<ManifestList>();
+        }
+
+        private Exception CreateException(JObject httpResponse)
+        {
+            var exceptions = new List<Exception>();
+            foreach (JObject error in (JArray)httpResponse["errors"])
+            {
+                exceptions.Add(new RegistryException((string)error["message"], (string)error["message"], (string)error["message"]));
+            }
+            if (exceptions.Count == 1)
+            {
+                return exceptions[0];
+            }
+            return new AggregateException(exceptions);
         }
     }
 }

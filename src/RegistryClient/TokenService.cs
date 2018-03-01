@@ -20,8 +20,9 @@ namespace RegistryClient
         public async Task<BearerToken> GetTokenAsync(AuthenticationChallenge challenge)
         {
             var bearerToken = new BearerToken();
+            // Cache is currently broken since I haven't overriden GetHashCode() for AuthenticationChallenge
             _tokenCache.TryGetValue(challenge, out bearerToken);
-            
+
             if (bearerToken?.Expiration < DateTime.Now)
             {
                 return bearerToken;
