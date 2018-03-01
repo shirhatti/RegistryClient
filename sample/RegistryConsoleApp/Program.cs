@@ -9,7 +9,8 @@ namespace RegistryConsoleApp
         static async Task<int> Main()
         {
             var dockerHubRegistry = new Registry();
-            await dockerHubRegistry.ConnectAsync();
+            await dockerHubRegistry.GetApiVersionAsync();
+            var tags = await dockerHubRegistry.GetTagsAsync("microsoft/iis");
             return 0;
         }
     }
