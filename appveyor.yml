@@ -1,5 +1,28 @@
-version: 1.0.{build}
+version: {build}
+
 image: Visual Studio 2017
+
+pull_requests:
+  do_not_increment_build_number: true
+
+environment:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
 build_script:
 - cmd: PowerShell -Version 2.0 .\build.ps1
+
 test: off
+
+artifacts:
+# Store NuGet packages
+- path: .\Artifacts\**\*.nupkg
+  name: NuGet
+
+deploy:  
+- provider: NuGet
+  server: https://www.myget.org/F/shirhatti-registryclient/api/v2
+  api_key:
+    secure: jKKmQiMl2Xx/+TMoxqWn8RLj2iLVEVWDkqMe3Iq4bE8vq4B5kVTIRn0XSFt2TzTq
+  on:
+    branch: master
