@@ -5,6 +5,9 @@
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 var artifactsDirectory = Directory("./Artifacts");
+var buildNumber =
+    HasArgument("BuildNumber") ? Argument<int>("BuildNumber") :
+    AppVeyor.IsRunningOnAppVeyor ? AppVeyor.Environment.Build.Number : 0;
 
 ///////////////////////////////////////////////////////////////////////////////
 // SETUP / TEARDOWN
@@ -55,7 +58,25 @@ Task("Restore")
         }
     });
 
+Task("Pack")
+    .IsDependentOn("Build")
+    .Does(() =>
+    {
+        var revision = "alpha" + buildNumber.ToString("D4");
+        foreach (var project in GetFiles("./src/**/*.csproj"))
+        {
+            DotNetCorePack(
+                project.GetDirectory().FullPath,
+                new DotNetCorePackSettings()
+                {
+                    Configuration = configuration,
+                    OutputDirectory = artifactsDirectory,
+                    VersionSuffix = revision
+                });
+        }
+    });
+
 Task("Default")
-    .IsDependentOn("Build");
+    .IsDependentOn("Pack");
 
 RunTarget(target);
