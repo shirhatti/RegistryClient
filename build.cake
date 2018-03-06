@@ -58,8 +58,26 @@ Task("Restore")
         }
     });
 
-Task("Pack")
+ Task("Test")
     .IsDependentOn("Build")
+    .Does(() =>
+    {
+        var projects = GetFiles("./test/**/*.csproj");
+        foreach(var project in projects)
+        {
+            DotNetCoreTest(
+                project.GetDirectory().FullPath,
+                new DotNetCoreTestSettings()
+                {
+                    Configuration = configuration,
+                    NoBuild = true,
+                    ArgumentCustomization = args => args.Append("--no-restore")
+                });
+        }
+    });
+
+Task("Pack")
+    .IsDependentOn("Test")
     .Does(() =>
     {
         var revision = "alpha" + buildNumber.ToString("D4");
