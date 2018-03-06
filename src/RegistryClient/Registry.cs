@@ -14,7 +14,7 @@ namespace RegistryClient
         private static readonly Uri _dockerHubUri = new Uri("https://registry.hub.docker.com/");
         private readonly Uri _registryUri;
         private readonly HttpClient _httpClient;
-        public Registry() : this(_dockerHubUri, new TokenService())
+        public Registry() : this(_dockerHubUri, new DockerHubTokenService())
         { }
         public Registry(Uri registryUri, ITokenService tokenService)
         {

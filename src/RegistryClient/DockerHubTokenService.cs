@@ -10,11 +10,11 @@ using System.Web;
 
 namespace RegistryClient
 {
-    class TokenService : ITokenService
+    public class DockerHubTokenService : ITokenService
     {
         private static HttpClient _client = new HttpClient();
         private readonly ConcurrentDictionary<AuthenticationChallenge, BearerToken> _tokenCache = new ConcurrentDictionary<AuthenticationChallenge, BearerToken>();
-        public TokenService()
+        public DockerHubTokenService()
         { }
 
         public async Task<BearerToken> GetTokenAsync(AuthenticationChallenge challenge)

@@ -8,19 +8,18 @@ namespace RegistryConsoleApp
     {
         static async Task<int> Main()
         {
+            var dockerHubTokenService = new DockerHubTokenService();
+            var dockerHubUri = new Uri("https://registry.hub.docker.com/");
+            var registry = new Registry(dockerHubUri, dockerHubTokenService);
+
             var repo = "microsoft/iis";
-            var dockerHubRegistry = new Registry();
-            var manifestList = await dockerHubRegistry.GetManifestListAsync(repo);
-            foreach(var manifestSummary in manifestList.Manifests)
+            var tags = await registry.GetTagsAsync(repo);
+
+            foreach(var tag in tags)
             {
-                var manifest = await dockerHubRegistry.GetManifestAsync(repo, manifestSummary.Digest);
-                Console.WriteLine($"{repo}:{manifestSummary.Digest}");
-                Console.WriteLine($"{manifestSummary.Platform.Os}: {manifestSummary.Platform.OsVersion}");
-                foreach (var layer in manifest.Layers)
-                {
-                    Console.WriteLine($"\t{layer.MediaType}\n\t{layer.Size}\n\t{layer.Digest}\n");
-                }
+                Console.WriteLine(tag);
             }
+
             return 0;
         }
     }
