@@ -8,6 +8,10 @@ pull_requests:
 environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   DOTNET_CLI_TELEMETRY_OPTOUT: true
+  op_build_user: "Appveyor"
+  op_build_user_email: "ci@appveyor.com"
+  access_token:
+    secure: /pBPnJnAkFjqj15xAyJjGLRtu1UWv31KmSwzm/O2zUUhzrfwf/Av0kQpIAKA2xQZ
 
 build_script:
 - ps: .\build.ps1
@@ -24,5 +28,30 @@ deploy:
   server: https://www.myget.org/F/shirhatti-registryclient/api/v2
   api_key:
     secure: jKKmQiMl2Xx/+TMoxqWn8RLj2iLVEVWDkqMe3Iq4bE8vq4B5kVTIRn0XSFt2TzTq
+  on:
+    branch: master
+
+after_deploy:
+- ps: |
+      if (-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
+      {
+        git checkout $env:APPVEYOR_REPO_BRANCH -q
+        choco install docfx -y
+        & docfx .\docs\docfx.json
+        if ($lastexitcode -ne 0){
+          throw [System.Exception] "docfx build failed with exit code $lastexitcode."
+        }
+        git config --global credential.helper store
+        Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+        git config --global user.email $env:op_build_user_email
+        git config --global user.name $env:op_build_user
+
+        git clone https://github.com/shirhatti/RegistryClient.git -b gh-pages origin_site -q
+        Copy-Item origin_site/.git docs\_site -recurse
+        cd docs\_site
+        git add -A 2>&1
+        git commit -m "CI Updates" -q
+        git push origin gh-pages -q
+      }
   on:
     branch: master
