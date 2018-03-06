@@ -71,7 +71,7 @@ Task("Restore")
                 {
                     Configuration = configuration,
                     NoBuild = true,
-                    ArgumentCustomization = args => args.Append("--no-restore")
+                    ArgumentCustomization = args => args.Append("--no-restore /p:SourceLinkCreate=true /v:n")
                 });
         }
     });
