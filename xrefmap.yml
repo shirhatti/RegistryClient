@@ -7,6 +7,24 @@ references:
   commentId: N:RegistryClient
   fullName: RegistryClient
   nameWithType: RegistryClient
+- uid: RegistryClient.AcrTokenService
+  name: AcrTokenService
+  href: api/RegistryClient.AcrTokenService.html
+  commentId: T:RegistryClient.AcrTokenService
+  fullName: RegistryClient.AcrTokenService
+  nameWithType: AcrTokenService
+- uid: RegistryClient.AcrTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
+  name: GetTokenAsync(AuthenticationChallenge)
+  href: api/RegistryClient.AcrTokenService.html#RegistryClient_AcrTokenService_GetTokenAsync_RegistryClient_AuthenticationChallenge_
+  commentId: M:RegistryClient.AcrTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
+  fullName: RegistryClient.AcrTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
+  nameWithType: AcrTokenService.GetTokenAsync(AuthenticationChallenge)
+- uid: RegistryClient.AcrTokenService.GetTokenAsync*
+  name: GetTokenAsync
+  href: api/RegistryClient.AcrTokenService.html#RegistryClient_AcrTokenService_GetTokenAsync_
+  commentId: Overload:RegistryClient.AcrTokenService.GetTokenAsync
+  fullName: RegistryClient.AcrTokenService.GetTokenAsync
+  nameWithType: AcrTokenService.GetTokenAsync
 - uid: RegistryClient.ApiVersion
   name: ApiVersion
   href: api/RegistryClient.ApiVersion.html
@@ -157,6 +175,60 @@ references:
   commentId: Overload:RegistryClient.Config.Size
   fullName: RegistryClient.Config.Size
   nameWithType: Config.Size
+- uid: RegistryClient.DockerHubTokenService
+  name: DockerHubTokenService
+  href: api/RegistryClient.DockerHubTokenService.html
+  commentId: T:RegistryClient.DockerHubTokenService
+  fullName: RegistryClient.DockerHubTokenService
+  nameWithType: DockerHubTokenService
+- uid: RegistryClient.DockerHubTokenService.#ctor
+  name: DockerHubTokenService()
+  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService__ctor
+  commentId: M:RegistryClient.DockerHubTokenService.#ctor
+  fullName: RegistryClient.DockerHubTokenService.DockerHubTokenService()
+  nameWithType: DockerHubTokenService.DockerHubTokenService()
+- uid: RegistryClient.DockerHubTokenService.#ctor(System.Net.NetworkCredential)
+  name: DockerHubTokenService(NetworkCredential)
+  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService__ctor_System_Net_NetworkCredential_
+  commentId: M:RegistryClient.DockerHubTokenService.#ctor(System.Net.NetworkCredential)
+  fullName: RegistryClient.DockerHubTokenService.DockerHubTokenService(System.Net.NetworkCredential)
+  nameWithType: DockerHubTokenService.DockerHubTokenService(NetworkCredential)
+- uid: RegistryClient.DockerHubTokenService.#ctor*
+  name: DockerHubTokenService
+  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService__ctor_
+  commentId: Overload:RegistryClient.DockerHubTokenService.#ctor
+  fullName: RegistryClient.DockerHubTokenService.DockerHubTokenService
+  nameWithType: DockerHubTokenService.DockerHubTokenService
+- uid: RegistryClient.DockerHubTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
+  name: GetTokenAsync(AuthenticationChallenge)
+  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService_GetTokenAsync_RegistryClient_AuthenticationChallenge_
+  commentId: M:RegistryClient.DockerHubTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
+  fullName: RegistryClient.DockerHubTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
+  nameWithType: DockerHubTokenService.GetTokenAsync(AuthenticationChallenge)
+- uid: RegistryClient.DockerHubTokenService.GetTokenAsync*
+  name: GetTokenAsync
+  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService_GetTokenAsync_
+  commentId: Overload:RegistryClient.DockerHubTokenService.GetTokenAsync
+  fullName: RegistryClient.DockerHubTokenService.GetTokenAsync
+  nameWithType: DockerHubTokenService.GetTokenAsync
+- uid: RegistryClient.HttpRequestMessageExtensions
+  name: HttpRequestMessageExtensions
+  href: api/RegistryClient.HttpRequestMessageExtensions.html
+  commentId: T:RegistryClient.HttpRequestMessageExtensions
+  fullName: RegistryClient.HttpRequestMessageExtensions
+  nameWithType: HttpRequestMessageExtensions
+- uid: RegistryClient.HttpRequestMessageExtensions.AddNetworkCredential(System.Net.Http.HttpRequestMessage,System.Net.NetworkCredential)
+  name: AddNetworkCredential(HttpRequestMessage, NetworkCredential)
+  href: api/RegistryClient.HttpRequestMessageExtensions.html#RegistryClient_HttpRequestMessageExtensions_AddNetworkCredential_System_Net_Http_HttpRequestMessage_System_Net_NetworkCredential_
+  commentId: M:RegistryClient.HttpRequestMessageExtensions.AddNetworkCredential(System.Net.Http.HttpRequestMessage,System.Net.NetworkCredential)
+  fullName: RegistryClient.HttpRequestMessageExtensions.AddNetworkCredential(System.Net.Http.HttpRequestMessage, System.Net.NetworkCredential)
+  nameWithType: HttpRequestMessageExtensions.AddNetworkCredential(HttpRequestMessage, NetworkCredential)
+- uid: RegistryClient.HttpRequestMessageExtensions.AddNetworkCredential*
+  name: AddNetworkCredential
+  href: api/RegistryClient.HttpRequestMessageExtensions.html#RegistryClient_HttpRequestMessageExtensions_AddNetworkCredential_
+  commentId: Overload:RegistryClient.HttpRequestMessageExtensions.AddNetworkCredential
+  fullName: RegistryClient.HttpRequestMessageExtensions.AddNetworkCredential
+  nameWithType: HttpRequestMessageExtensions.AddNetworkCredential
 - uid: RegistryClient.IRegistry
   name: IRegistry
   href: api/RegistryClient.IRegistry.html

@@ -5,6 +5,18 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.AcrTokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.AcrTokenService.html",
+          "hash": "AFvpVPTwgkIuMLy7S4ekZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RegistryClient.ApiVersion.yml",
       "output": {
         ".html": {
@@ -46,6 +58,30 @@
         ".html": {
           "relative_path": "api/RegistryClient.Config.html",
           "hash": "yOrbw1eT7fIgglCh3E8xjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.DockerHubTokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.DockerHubTokenService.html",
+          "hash": "9IVGu7xSmqhH3LfMvHj4ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.HttpRequestMessageExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.HttpRequestMessageExtensions.html",
+          "hash": "PK0EOf5Z5zHTLHxqijBpoA=="
         }
       },
       "is_incremental": false,
@@ -165,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.html",
-          "hash": "DALmX4vMmrhhyEDBMVVlHQ=="
+          "hash": "7gqy7s2Q5xQMaTNmS56+ug=="
         }
       },
       "is_incremental": false,
@@ -177,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HmOBeUNUyOLc1vZflrdt3A=="
+          "hash": "Epn7h6iRCjRtS+koV5iJSg=="
         }
       },
       "is_incremental": false,
@@ -243,17 +279,17 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
