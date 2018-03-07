@@ -1,3 +1,6 @@
+---
+outputFileName: index.html
+---
 # Registry Client
 
 [![Build status](https://ci.appveyor.com/api/projects/status/39wuvnkvpg0ahyya?svg=true)](https://ci.appveyor.com/project/shirhatti/registryclient)
