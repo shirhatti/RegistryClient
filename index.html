@@ -64,8 +64,18 @@
 
 <p><a href="https://ci.appveyor.com/project/shirhatti/registryclient"><img src="https://ci.appveyor.com/api/projects/status/39wuvnkvpg0ahyya?svg=true" alt="Build status"></a>
 <img src="https://img.shields.io/myget/shirhatti-registryclient/v/RegistryClient.svg" alt="MyGet"></p>
-<pre><code>dotnet add package RegistryClient --version 0.1.0-* --source https://www.myget.org/F/shirhatti-registryclient/api/v3/index.json
-</code></pre><ul>
+<p>Registry Client is a client library targetting .NET Standard 2.0 that provides an easy way to interact with the <a href="https://docs.docker.com/registry/spec/api/">Docker Registry HTTP API V2</a></p>
+<h2 id="usage-example">Usage example</h2>
+<p>Get list of tags for a repository</p>
+<pre><code class="lang-c#">var repo = &quot;microsoft/dotnet&quot;;
+var dockerHubRegistry = new Registry();
+var tags = await dockerHubRegistry.GetTagsAsync(repo);
+foreach(var tag in tags)
+{
+    Console.WriteLine(tag);
+}
+</code></pre><h2 id="additional-resources">Additional Resources</h2>
+<ul>
 <li><a href="https://cdn.rawgit.com/shirhatti/RegistryClient/gh-pages/">Docs</a></li>
 <li><a href="https://www.myget.org/feed/shirhatti-registryclient/package/nuget/RegistryClient">MyGet</a></li>
 <li><a href="https://ci.appveyor.com/project/shirhatti/registryclient">AppVeyor</a></li>
