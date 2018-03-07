@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -47,13 +48,21 @@ namespace RegistryClient
             var uri = new Uri(_registryUri, $"/v2/{name}/tags/list");
             var request = new HttpRequestMessage(HttpMethod.Get, uri);
             var response = await _httpClient.SendAsync(request);
-            var responseJObject = JObject.Parse(await response.Content.ReadAsStringAsync());
-            if (response.StatusCode != HttpStatusCode.OK)
+            var responseContent = await response.Content.ReadAsStringAsync();
+            try
             {
-                throw CreateException(responseJObject);
+                var responseJObject = JObject.Parse(responseContent);
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw CreateException(responseJObject);
+                }
+                var tags = ((JArray)responseJObject["tags"]).ToObject<List<string>>();
+                return tags;
             }
-            var tags = ((JArray)responseJObject["tags"]).ToObject<List<string>>();
-            return tags;
+            catch (JsonReaderException e)
+            {
+                throw new RegistryException(e.Message);
+            }
         }
         public async Task<Manifest> GetManifestAsync(string name)
         {
