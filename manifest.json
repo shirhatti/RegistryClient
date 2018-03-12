@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.AcrTokenService.html",
-          "hash": "AFvpVPTwgkIuMLy7S4ekZw=="
+          "hash": "UAe5v8AkvGz6w1Hl9lmM6Q=="
         }
       },
       "is_incremental": false,
@@ -45,19 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.AuthenticationChallenge.html",
-          "hash": "IUdX5MfYktdFDoz3yIOQ0g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RegistryClient.BearerToken.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RegistryClient.BearerToken.html",
-          "hash": "MOcYlnFtmGOsFrIxoHAr1g=="
+          "hash": "z/Lx59rVi7RiSzY9cIlV3Q=="
         }
       },
       "is_incremental": false,
@@ -81,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.DockerHubTokenService.html",
-          "hash": "9IVGu7xSmqhH3LfMvHj4ug=="
+          "hash": "U33e5SiTNhyd8JyltBTJ7g=="
         }
       },
       "is_incremental": false,
@@ -117,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.ITokenService.html",
-          "hash": "+vYe/LiVTc/wTRGHdGv6hg=="
+          "hash": "j5gCvJbW+5/peg8dXulFcg=="
         }
       },
       "is_incremental": false,
@@ -201,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.RegistryHandler.html",
-          "hash": "Rik4IF5E8FHVGJsS1egqzQ=="
+          "hash": "DGcADc2nCiuE7TaHUIjPXA=="
         }
       },
       "is_incremental": false,
@@ -213,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.html",
-          "hash": "7gqy7s2Q5xQMaTNmS56+ug=="
+          "hash": "IEqd+oXRRbcTfGH0S/pDyQ=="
         }
       },
       "is_incremental": false,
@@ -225,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Epn7h6iRCjRtS+koV5iJSg=="
+          "hash": "UWdeqn4ZF0Dw0DoS5YewXQ=="
         }
       },
       "is_incremental": false,

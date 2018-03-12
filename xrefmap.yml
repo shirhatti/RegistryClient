@@ -49,6 +49,18 @@ references:
   commentId: T:RegistryClient.AuthenticationChallenge
   fullName: RegistryClient.AuthenticationChallenge
   nameWithType: AuthenticationChallenge
+- uid: RegistryClient.AuthenticationChallenge.ParseBearerResponseChallenge(System.String)
+  name: ParseBearerResponseChallenge(String)
+  href: api/RegistryClient.AuthenticationChallenge.html#RegistryClient_AuthenticationChallenge_ParseBearerResponseChallenge_System_String_
+  commentId: M:RegistryClient.AuthenticationChallenge.ParseBearerResponseChallenge(System.String)
+  fullName: RegistryClient.AuthenticationChallenge.ParseBearerResponseChallenge(System.String)
+  nameWithType: AuthenticationChallenge.ParseBearerResponseChallenge(String)
+- uid: RegistryClient.AuthenticationChallenge.ParseBearerResponseChallenge*
+  name: ParseBearerResponseChallenge
+  href: api/RegistryClient.AuthenticationChallenge.html#RegistryClient_AuthenticationChallenge_ParseBearerResponseChallenge_
+  commentId: Overload:RegistryClient.AuthenticationChallenge.ParseBearerResponseChallenge
+  fullName: RegistryClient.AuthenticationChallenge.ParseBearerResponseChallenge
+  nameWithType: AuthenticationChallenge.ParseBearerResponseChallenge
 - uid: RegistryClient.AuthenticationChallenge.Realm
   name: Realm
   href: api/RegistryClient.AuthenticationChallenge.html#RegistryClient_AuthenticationChallenge_Realm
@@ -85,54 +97,18 @@ references:
   commentId: Overload:RegistryClient.AuthenticationChallenge.Service
   fullName: RegistryClient.AuthenticationChallenge.Service
   nameWithType: AuthenticationChallenge.Service
-- uid: RegistryClient.BearerToken
-  name: BearerToken
-  href: api/RegistryClient.BearerToken.html
-  commentId: T:RegistryClient.BearerToken
-  fullName: RegistryClient.BearerToken
-  nameWithType: BearerToken
-- uid: RegistryClient.BearerToken.#ctor
-  name: BearerToken()
-  href: api/RegistryClient.BearerToken.html#RegistryClient_BearerToken__ctor
-  commentId: M:RegistryClient.BearerToken.#ctor
-  fullName: RegistryClient.BearerToken.BearerToken()
-  nameWithType: BearerToken.BearerToken()
-- uid: RegistryClient.BearerToken.#ctor(System.String,System.DateTime)
-  name: BearerToken(String, DateTime)
-  href: api/RegistryClient.BearerToken.html#RegistryClient_BearerToken__ctor_System_String_System_DateTime_
-  commentId: M:RegistryClient.BearerToken.#ctor(System.String,System.DateTime)
-  fullName: RegistryClient.BearerToken.BearerToken(System.String, System.DateTime)
-  nameWithType: BearerToken.BearerToken(String, DateTime)
-- uid: RegistryClient.BearerToken.#ctor*
-  name: BearerToken
-  href: api/RegistryClient.BearerToken.html#RegistryClient_BearerToken__ctor_
-  commentId: Overload:RegistryClient.BearerToken.#ctor
-  fullName: RegistryClient.BearerToken.BearerToken
-  nameWithType: BearerToken.BearerToken
-- uid: RegistryClient.BearerToken.Expiration
-  name: Expiration
-  href: api/RegistryClient.BearerToken.html#RegistryClient_BearerToken_Expiration
-  commentId: P:RegistryClient.BearerToken.Expiration
-  fullName: RegistryClient.BearerToken.Expiration
-  nameWithType: BearerToken.Expiration
-- uid: RegistryClient.BearerToken.Expiration*
-  name: Expiration
-  href: api/RegistryClient.BearerToken.html#RegistryClient_BearerToken_Expiration_
-  commentId: Overload:RegistryClient.BearerToken.Expiration
-  fullName: RegistryClient.BearerToken.Expiration
-  nameWithType: BearerToken.Expiration
-- uid: RegistryClient.BearerToken.Token
-  name: Token
-  href: api/RegistryClient.BearerToken.html#RegistryClient_BearerToken_Token
-  commentId: P:RegistryClient.BearerToken.Token
-  fullName: RegistryClient.BearerToken.Token
-  nameWithType: BearerToken.Token
-- uid: RegistryClient.BearerToken.Token*
-  name: Token
-  href: api/RegistryClient.BearerToken.html#RegistryClient_BearerToken_Token_
-  commentId: Overload:RegistryClient.BearerToken.Token
-  fullName: RegistryClient.BearerToken.Token
-  nameWithType: BearerToken.Token
+- uid: RegistryClient.AuthenticationChallenge.ToString
+  name: ToString()
+  href: api/RegistryClient.AuthenticationChallenge.html#RegistryClient_AuthenticationChallenge_ToString
+  commentId: M:RegistryClient.AuthenticationChallenge.ToString
+  fullName: RegistryClient.AuthenticationChallenge.ToString()
+  nameWithType: AuthenticationChallenge.ToString()
+- uid: RegistryClient.AuthenticationChallenge.ToString*
+  name: ToString
+  href: api/RegistryClient.AuthenticationChallenge.html#RegistryClient_AuthenticationChallenge_ToString_
+  commentId: Overload:RegistryClient.AuthenticationChallenge.ToString
+  fullName: RegistryClient.AuthenticationChallenge.ToString
+  nameWithType: AuthenticationChallenge.ToString
 - uid: RegistryClient.Config
   name: Config
   href: api/RegistryClient.Config.html
