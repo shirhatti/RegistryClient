@@ -22,7 +22,10 @@ namespace RegistryClient
             _registryUri = registryUri;
             _httpClient = new HttpClient(new RegistryHandler(new HttpClientHandler(), tokenService));
         }
-
+        /// <summary>
+        /// Retrieve the API version of the Docker Registry HTTP API
+        /// </summary>
+        /// <returns>Returns the <see cref="ApiVersion" /> of the Docker Registry</returns>
         public async Task<ApiVersion> GetApiVersionAsync()
         {
             var uri = new Uri(_registryUri, "/v2");
@@ -42,7 +45,11 @@ namespace RegistryClient
             
             return ApiVersion.v1;
         }
-
+        /// <summary>
+        /// Fetch the tags under the repository identified by <paramref name="name"/>
+        /// </summary>
+        /// <param name="name">Name of the target repository</param>
+        /// <returns>Returns an <see cref="IList{String}" /> of tags for the named repository</returns>
         public async Task<IList<string>> GetTagsAsync(string name)
         {
             var uri = new Uri(_registryUri, $"/v2/{name}/tags/list");
@@ -64,12 +71,13 @@ namespace RegistryClient
                 throw new RegistryException(e.Message);
             }
         }
-        public async Task<Manifest> GetManifestAsync(string name)
-        {
-            return await GetManifestAsync(name, "latest");
-        }
-
-        public async Task<Manifest> GetManifestAsync(string name, string reference)
+        /// <summary>
+        /// Fetch the manifest identified by <paramref name="name"/> and <paramref name="reference"/>
+        /// </summary>
+        /// <param name="name">Name of the target repository</param>
+        /// <param name="reference">Tag or digeset of the target manifest</param>
+        /// <returns>Returns a <see cref="Manifest" /> for the specified reference</returns>
+        public async Task<Manifest> GetManifestAsync(string name, string reference = "latest")
         {
             var uri = new Uri(_registryUri, $"/v2/{name}/manifests/{reference}");
             var request = new HttpRequestMessage(HttpMethod.Get, uri);
