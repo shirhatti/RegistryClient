@@ -9,13 +9,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace RegistryClient
+namespace RegistryClient.DockerHub
 {
     public class DockerHubTokenService : ITokenService
     {
         private static HttpClient _client = new HttpClient();
         private static NetworkCredential _credential;
-        private readonly ConcurrentDictionary<AuthenticationChallenge, BearerToken> _tokenCache = new ConcurrentDictionary<AuthenticationChallenge, BearerToken>();
         public DockerHubTokenService()
         { }
 
@@ -26,22 +25,6 @@ namespace RegistryClient
 
         public async Task<BearerToken> GetTokenAsync(AuthenticationChallenge challenge)
         {
-            var bearerToken = new BearerToken();
-            // Cache is currently broken since I haven't overriden GetHashCode() for AuthenticationChallenge
-            _tokenCache.TryGetValue(challenge, out bearerToken);
-
-            if (bearerToken?.Expiration < DateTime.Now)
-            {
-                return bearerToken;
-            }
-
-            return await RefreshBearerTokenAsync(challenge);
-        }
-
-        private async Task<BearerToken> RefreshBearerTokenAsync(AuthenticationChallenge challenge)
-        {
-            _tokenCache.TryRemove(challenge, out _);
-
             var query = HttpUtility.ParseQueryString(string.Empty);
             query["service"] = challenge.Service;
             if (challenge.Scope != null)
@@ -57,7 +40,7 @@ namespace RegistryClient
             {
                 requestMessage.AddNetworkCredential(_credential);
             }
-            
+
             var responseMessage = _client.SendAsync(requestMessage, cancellationToken);
             var responseJObject = JObject.Parse(await (await responseMessage).Content.ReadAsStringAsync());
             var token = (string)responseJObject["token"];
@@ -67,8 +50,6 @@ namespace RegistryClient
             var expiresIn = (int)responseJObject["expires_in"];
             time = time.AddSeconds(expiresIn);
             var bearerToken = new BearerToken(token, time);
-
-            _tokenCache.TryAdd(challenge, bearerToken);
 
             return bearerToken;
         }

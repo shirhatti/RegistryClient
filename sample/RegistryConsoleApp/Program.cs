@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using RegistryClient;
+using RegistryClient.DockerHub;
 
 namespace RegistryConsoleApp
 {

@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using RegistryClient.DockerHub;
 
 namespace RegistryClient
 {
@@ -113,6 +114,11 @@ namespace RegistryClient
                 return exceptions[0];
             }
             return new AggregateException(exceptions);
+        }
+
+        public async Task<PagedResult<string>> GetRepositoriesAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }
