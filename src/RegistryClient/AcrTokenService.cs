@@ -7,7 +7,7 @@ namespace RegistryClient
 {
     public class AcrTokenService : ITokenService
     {
-        public Task<BearerToken> GetTokenAsync(AuthenticationChallenge challenge)
+        public Task<string> GetTokenAsync(AuthenticationChallenge challenge)
         {
             throw new NotImplementedException();
         }

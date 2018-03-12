@@ -4,6 +4,6 @@ namespace RegistryClient
 {
     public interface ITokenService
     {
-        Task<BearerToken> GetTokenAsync(AuthenticationChallenge challenge);
+        Task<string> GetTokenAsync(AuthenticationChallenge challenge);
     }
 }

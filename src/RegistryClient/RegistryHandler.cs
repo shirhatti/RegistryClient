@@ -1,4 +1,3 @@
-using RegistryClient.Parser;
 using System;
 using System.Linq;
 using System.Net;
@@ -34,11 +33,11 @@ namespace RegistryClient
                     throw new NotSupportedException();
                 }
 
-                var authenticationChallenge = HeaderParser.ParseBearerResponseChallenge(wwwAuthenticate.Parameter);
+                var authenticationChallenge = AuthenticationChallenge.ParseBearerResponseChallenge(wwwAuthenticate.Parameter);
 
                 // Retry with bearer token
                 var bearerToken = await _tokenService.GetTokenAsync(authenticationChallenge);
-                requestMessage.Headers.Add("Authorization", $"Bearer {bearerToken.Token}");
+                requestMessage.Headers.Add("Authorization", $"Bearer {bearerToken}");
                 response = await base.SendAsync(requestMessage, cancellationToken);
             }
 
