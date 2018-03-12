@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.AuthenticationChallenge.html",
-          "hash": "z/Lx59rVi7RiSzY9cIlV3Q=="
+          "hash": "xzZkKQf4Bw2QG7zjyzenIQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.Config.html",
-          "hash": "yOrbw1eT7fIgglCh3E8xjA=="
+          "hash": "Oxgkuvx8P+oc2jTXBBgdrw=="
         }
       },
       "is_incremental": false,
@@ -65,11 +65,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RegistryClient.DockerHubTokenService.yml",
+      "source_relative_path": "api/RegistryClient.DockerHub.DockerHubTokenService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/RegistryClient.DockerHubTokenService.html",
-          "hash": "U33e5SiTNhyd8JyltBTJ7g=="
+          "relative_path": "api/RegistryClient.DockerHub.DockerHubTokenService.html",
+          "hash": "pZcJrrJZ727vQs3PVb1gBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.DockerHub.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.DockerHub.html",
+          "hash": "MuX9DrM6j6hEfk8kmhJ4xg=="
         }
       },
       "is_incremental": false,
@@ -117,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.Manifest.html",
-          "hash": "DSYjq36As+RWL8ysbmbjng=="
+          "hash": "UkAO4h2+ZeCpRIfHJIvmIQ=="
         }
       },
       "is_incremental": false,
@@ -129,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.ManifestList.html",
-          "hash": "pXIq8rnezqlVn0rlCElCFQ=="
+          "hash": "cAUVTtrdKf+QGGX+R9jNQg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.ManifestSummary.html",
-          "hash": "BQ3CJLFNnQFsK5IZtLvPBg=="
+          "hash": "sWEbMkOk+K8VITXEMvR4zQ=="
         }
       },
       "is_incremental": false,
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.Platform.html",
-          "hash": "ks8M203M0whUt5k7k5X/YA=="
+          "hash": "XDi9fwnDX99FntbfdhuoJw=="
         }
       },
       "is_incremental": false,
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/RegistryClient.html",
-          "hash": "IEqd+oXRRbcTfGH0S/pDyQ=="
+          "hash": "/HUsvvy5K4uycR5J31ya+w=="
         }
       },
       "is_incremental": false,
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "UWdeqn4ZF0Dw0DoS5YewXQ=="
+          "hash": "MEcSvlyW6gPJhA6M1HPTJA=="
         }
       },
       "is_incremental": false,

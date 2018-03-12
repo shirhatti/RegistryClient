@@ -151,41 +151,47 @@ references:
   commentId: Overload:RegistryClient.Config.Size
   fullName: RegistryClient.Config.Size
   nameWithType: Config.Size
-- uid: RegistryClient.DockerHubTokenService
+- uid: RegistryClient.DockerHub
+  name: RegistryClient.DockerHub
+  href: api/RegistryClient.DockerHub.html
+  commentId: N:RegistryClient.DockerHub
+  fullName: RegistryClient.DockerHub
+  nameWithType: RegistryClient.DockerHub
+- uid: RegistryClient.DockerHub.DockerHubTokenService
   name: DockerHubTokenService
-  href: api/RegistryClient.DockerHubTokenService.html
-  commentId: T:RegistryClient.DockerHubTokenService
-  fullName: RegistryClient.DockerHubTokenService
+  href: api/RegistryClient.DockerHub.DockerHubTokenService.html
+  commentId: T:RegistryClient.DockerHub.DockerHubTokenService
+  fullName: RegistryClient.DockerHub.DockerHubTokenService
   nameWithType: DockerHubTokenService
-- uid: RegistryClient.DockerHubTokenService.#ctor
+- uid: RegistryClient.DockerHub.DockerHubTokenService.#ctor
   name: DockerHubTokenService()
-  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService__ctor
-  commentId: M:RegistryClient.DockerHubTokenService.#ctor
-  fullName: RegistryClient.DockerHubTokenService.DockerHubTokenService()
+  href: api/RegistryClient.DockerHub.DockerHubTokenService.html#RegistryClient_DockerHub_DockerHubTokenService__ctor
+  commentId: M:RegistryClient.DockerHub.DockerHubTokenService.#ctor
+  fullName: RegistryClient.DockerHub.DockerHubTokenService.DockerHubTokenService()
   nameWithType: DockerHubTokenService.DockerHubTokenService()
-- uid: RegistryClient.DockerHubTokenService.#ctor(System.Net.NetworkCredential)
+- uid: RegistryClient.DockerHub.DockerHubTokenService.#ctor(System.Net.NetworkCredential)
   name: DockerHubTokenService(NetworkCredential)
-  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService__ctor_System_Net_NetworkCredential_
-  commentId: M:RegistryClient.DockerHubTokenService.#ctor(System.Net.NetworkCredential)
-  fullName: RegistryClient.DockerHubTokenService.DockerHubTokenService(System.Net.NetworkCredential)
+  href: api/RegistryClient.DockerHub.DockerHubTokenService.html#RegistryClient_DockerHub_DockerHubTokenService__ctor_System_Net_NetworkCredential_
+  commentId: M:RegistryClient.DockerHub.DockerHubTokenService.#ctor(System.Net.NetworkCredential)
+  fullName: RegistryClient.DockerHub.DockerHubTokenService.DockerHubTokenService(System.Net.NetworkCredential)
   nameWithType: DockerHubTokenService.DockerHubTokenService(NetworkCredential)
-- uid: RegistryClient.DockerHubTokenService.#ctor*
+- uid: RegistryClient.DockerHub.DockerHubTokenService.#ctor*
   name: DockerHubTokenService
-  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService__ctor_
-  commentId: Overload:RegistryClient.DockerHubTokenService.#ctor
-  fullName: RegistryClient.DockerHubTokenService.DockerHubTokenService
+  href: api/RegistryClient.DockerHub.DockerHubTokenService.html#RegistryClient_DockerHub_DockerHubTokenService__ctor_
+  commentId: Overload:RegistryClient.DockerHub.DockerHubTokenService.#ctor
+  fullName: RegistryClient.DockerHub.DockerHubTokenService.DockerHubTokenService
   nameWithType: DockerHubTokenService.DockerHubTokenService
-- uid: RegistryClient.DockerHubTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
+- uid: RegistryClient.DockerHub.DockerHubTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
   name: GetTokenAsync(AuthenticationChallenge)
-  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService_GetTokenAsync_RegistryClient_AuthenticationChallenge_
-  commentId: M:RegistryClient.DockerHubTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
-  fullName: RegistryClient.DockerHubTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
+  href: api/RegistryClient.DockerHub.DockerHubTokenService.html#RegistryClient_DockerHub_DockerHubTokenService_GetTokenAsync_RegistryClient_AuthenticationChallenge_
+  commentId: M:RegistryClient.DockerHub.DockerHubTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
+  fullName: RegistryClient.DockerHub.DockerHubTokenService.GetTokenAsync(RegistryClient.AuthenticationChallenge)
   nameWithType: DockerHubTokenService.GetTokenAsync(AuthenticationChallenge)
-- uid: RegistryClient.DockerHubTokenService.GetTokenAsync*
+- uid: RegistryClient.DockerHub.DockerHubTokenService.GetTokenAsync*
   name: GetTokenAsync
-  href: api/RegistryClient.DockerHubTokenService.html#RegistryClient_DockerHubTokenService_GetTokenAsync_
-  commentId: Overload:RegistryClient.DockerHubTokenService.GetTokenAsync
-  fullName: RegistryClient.DockerHubTokenService.GetTokenAsync
+  href: api/RegistryClient.DockerHub.DockerHubTokenService.html#RegistryClient_DockerHub_DockerHubTokenService_GetTokenAsync_
+  commentId: Overload:RegistryClient.DockerHub.DockerHubTokenService.GetTokenAsync
+  fullName: RegistryClient.DockerHub.DockerHubTokenService.GetTokenAsync
   nameWithType: DockerHubTokenService.GetTokenAsync
 - uid: RegistryClient.HttpRequestMessageExtensions
   name: HttpRequestMessageExtensions
