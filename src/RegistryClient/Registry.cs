@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using RegistryClient.DockerHub;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -64,6 +65,25 @@ namespace RegistryClient
                 throw new RegistryException(e.Message);
             }
         }
+
+        public async Task<string> GetDigestFromTagAsync(string name, string reference)
+        {
+            var uri = new Uri(_registryUri, $"/v2/{name}/manifests/{reference}");
+            var request = new HttpRequestMessage(HttpMethod.Head, uri);
+            request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.docker.distribution.manifest.list.v2+json"));
+            var response = await _httpClient.SendAsync(request);
+            if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                return null;
+            }
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                throw new RegistryException();
+            }
+            var digest = response.Headers.GetValues("Docker-Content-Digest").FirstOrDefault();
+            return digest;
+        }
+
         public async Task<Manifest> GetManifestAsync(string name)
         {
             return await GetManifestAsync(name, "latest");
@@ -76,6 +96,10 @@ namespace RegistryClient
             request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.docker.distribution.manifest.v2+json"));
             var response = await _httpClient.SendAsync(request);
             var responseJObject = JObject.Parse(await response.Content.ReadAsStringAsync());
+            if (response.StatusCode != HttpStatusCode.NotFound)
+            {
+                throw CreateException(responseJObject);
+            }
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 throw CreateException(responseJObject);

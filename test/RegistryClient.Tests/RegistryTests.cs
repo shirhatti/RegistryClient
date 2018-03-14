@@ -49,6 +49,14 @@ namespace RegistryClient.Tests
             }
         }
 
+        [Theory]
+        [InlineData("microsoft/iis", "TP5", "sha256:59534621c0d99798c11946eba69a489ac096a754e4576eaac8a813ca88796530")]
+        public async Task GetDigestFromTagTestAsync(string name, string reference, string expectedDigest)
+        {
+            var digest = await _registry.GetDigestFromTagAsync(name, reference);
+            Assert.Equal(expectedDigest, digest);
+        }
+
         //TODO Test GetManifestAsync(string name, string reference);
         [Fact]
         public void GetManifestTest()

@@ -7,6 +7,7 @@ namespace RegistryClient
     {
         Task<ApiVersion> GetApiVersionAsync();
         Task<IList<string>> GetTagsAsync(string name);
+        Task<string> GetDigestFromTagAsync(string name, string reference);
         Task<Manifest> GetManifestAsync(string name, string reference);
         Task<ManifestList> GetManifestListAsync(string name, string reference);
     }
