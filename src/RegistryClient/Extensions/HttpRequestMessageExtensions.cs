@@ -16,6 +16,15 @@ namespace RegistryClient
 
             return httpRequestMessage;
         }
+
+        public static HttpRequestMessage AddNetworkCredential(this HttpRequestMessage httpRequestMessage, string username, string password)
+        {
+            var credential = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{username}:{password}"));
+            var authHeaderValue = new AuthenticationHeaderValue("Basic", credential);
+            httpRequestMessage.Headers.Authorization = authHeaderValue;
+
+            return httpRequestMessage;
+        }
     }
 }
 
