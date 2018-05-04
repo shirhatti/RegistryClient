@@ -96,7 +96,7 @@ namespace RegistryClient
             request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.docker.distribution.manifest.v2+json"));
             var response = await _httpClient.SendAsync(request);
             var responseJObject = JObject.Parse(await response.Content.ReadAsStringAsync());
-            if (response.StatusCode != HttpStatusCode.NotFound)
+            if (response.StatusCode == HttpStatusCode.NotFound)
             {
                 throw CreateException(responseJObject);
             }
