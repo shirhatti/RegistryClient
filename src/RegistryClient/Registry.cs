@@ -70,7 +70,7 @@ namespace RegistryClient
         {
             var uri = new Uri(_registryUri, $"/v2/{name}/manifests/{reference}");
             var request = new HttpRequestMessage(HttpMethod.Head, uri);
-            request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.docker.distribution.manifest.list.v2+json"));
+            request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.docker.distribution.manifest.v2+json"));
             var response = await _httpClient.SendAsync(request);
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
@@ -137,6 +137,22 @@ namespace RegistryClient
                 return exceptions[0];
             }
             return new AggregateException(exceptions);
+        }
+
+        public async Task<string> PutManifestAsync(string name, string tag, Manifest manifest)
+        {
+            var uri = new Uri(_registryUri, $"/v2/{name}/manifests/{tag}");
+            var request = new HttpRequestMessage(HttpMethod.Put, uri); 
+            request.Content = new StringContent(JsonConvert.SerializeObject(manifest));
+            request.Content.Headers.ContentType.MediaType = "application/vnd.docker.distribution.manifest.v2+json";
+            var response = await _httpClient.SendAsync(request);
+            if (response.StatusCode == HttpStatusCode.Created)
+            {
+                var digest = response.Headers.GetValues("Docker-Content-Digest").FirstOrDefault();
+                return digest;
+            }
+            var responseJObject = JObject.Parse(await response.Content.ReadAsStringAsync());
+            throw CreateException(responseJObject);
         }
     }
 }

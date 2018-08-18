@@ -9,6 +9,7 @@ namespace RegistryClient
         Task<IList<string>> GetTagsAsync(string name);
         Task<string> GetDigestFromTagAsync(string name, string reference);
         Task<Manifest> GetManifestAsync(string name, string reference);
+        Task<string> PutManifestAsync(string name, string tag, Manifest manifest);
         Task<ManifestList> GetManifestListAsync(string name, string reference);
     }
 }
