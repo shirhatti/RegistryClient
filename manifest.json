@@ -9,7 +9,247 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "jmKOkh8PEMLPaNyikMkBUw=="
+          "hash": "Fq6MMiAoNbZ/oGqSMBAJfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.AcrTokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.AcrTokenService.html",
+          "hash": "OhBxsjgb5Hk5ZRCFZKIKdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.ApiVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.ApiVersion.html",
+          "hash": "kq/SDh2XmG30hi46osVJgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.AuthenticationChallenge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.AuthenticationChallenge.html",
+          "hash": "JsMZ5ijjjTKUBcDdUDSFTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.AzureContainerRegistry.AzureContainerRegistryTokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.AzureContainerRegistry.AzureContainerRegistryTokenService.html",
+          "hash": "0lBGM7h/RaUo3VdMu/Cj1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.AzureContainerRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.AzureContainerRegistry.html",
+          "hash": "m6ON/hF3Bb5vHfnfKqWnqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.Config.html",
+          "hash": "0LczQGAXNg5873TLgxhDfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.DockerHub.DockerHubTokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.DockerHub.DockerHubTokenService.html",
+          "hash": "sWNyAZu4wnQEPGghMpU/lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.DockerHub.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.DockerHub.html",
+          "hash": "ZhZuyuoTVlUXobqDiuCIiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.HttpRequestMessageExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.HttpRequestMessageExtensions.html",
+          "hash": "RLbBxq8gF3IulpJT98vAGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.IRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.IRegistry.html",
+          "hash": "9IfSjRJPFcmhL2zpbtVE8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.ITokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.ITokenService.html",
+          "hash": "eiJLVLWcFrviXFuFQwm57Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.Manifest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.Manifest.html",
+          "hash": "7jZhgR4xydqcJW+46iDm0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.ManifestList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.ManifestList.html",
+          "hash": "X44gZLFlNwysJmYJRWk1YQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.ManifestSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.ManifestSummary.html",
+          "hash": "lgAq7nbl+ni9oGZhr7rw3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.Platform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.Platform.html",
+          "hash": "xbqyCJopdv03HNKFp9e36g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.Registry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.Registry.html",
+          "hash": "cofGhGMNhxY3zHtvYr7h8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.RegistryException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.RegistryException.html",
+          "hash": "2YmC+zV2s0X5jIWN9KdKhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.RegistryHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.RegistryHandler.html",
+          "hash": "k5LzqGHWcJnxzu9EO9QsGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RegistryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RegistryClient.html",
+          "hash": "QA2atslKi9R+w6eH8OgDnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "vhfg2AE0wnCsaRgFDjPuaQ=="
         }
       },
       "is_incremental": false,
@@ -21,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "2nmDax6ZIT5Ug69i52LG0g=="
+          "hash": "zHKdVDu13nKZNQgDyZ2kSQ=="
         }
       },
       "is_incremental": false,
@@ -33,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
         }
       },
       "is_incremental": false,
@@ -45,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "rriDt74Cu8gYLSQOoWij/A=="
+          "hash": "6PgoF6ZNDwwQwcBO+Ep0Ww=="
         }
       },
       "is_incremental": false,
@@ -62,10 +302,14 @@
       "processors": {
         "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         }
