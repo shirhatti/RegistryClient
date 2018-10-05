@@ -26,13 +26,11 @@ namespace RegistryClient.Tests
             get
             {
                 yield return new object[] {
-                    "library/hello-world",
-                    new[] { "latest",
-                            "linux",
+                    "shirhatti/registryclienttests",
+                    new[] { "linux",
                             "nanoserver-1709",
+                            "nanoserver-1803",
                             "nanoserver-sac2016",
-                            "nanoserver",
-                            "nanoserver1709"
                     }
                 };
             }
@@ -50,7 +48,7 @@ namespace RegistryClient.Tests
         }
 
         [Theory]
-        [InlineData("microsoft/iis", "TP5", "sha256:59534621c0d99798c11946eba69a489ac096a754e4576eaac8a813ca88796530")]
+        [InlineData("shirhatti/registryclienttests", "linux", "sha256:1a6fd470b9ce10849be79e99529a88371dff60c60aab424c077007f6979b4812")]
         public async Task GetDigestFromTagTestAsync(string name, string reference, string expectedDigest)
         {
             var digest = await _registry.GetDigestFromTagAsync(name, reference);
