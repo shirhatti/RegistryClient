@@ -71,7 +71,7 @@ Task("Restore")
                 {
                     Configuration = configuration,
                     NoBuild = true,
-                    ArgumentCustomization = args => args.Append("--no-restore -xml ./TEST.xml /p:SourceLinkCreate=true /v:n")
+                    ArgumentCustomization = args => args.Append("--no-restore --logger trx /p:SourceLinkCreate=true /v:n")
                 });
         }
     });
